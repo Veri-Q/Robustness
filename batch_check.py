@@ -1,5 +1,5 @@
-from Qrobustness import RobustnessVerifier, PureRobustnessVerifier
-from scipy.io import loadmat
+from VeriQ import RobustnessVerifier, PureRobustnessVerifier
+from numpy import load
 from prettytable import PrettyTable
 from sys import argv
 
@@ -13,7 +13,7 @@ if state_flag == 'mixed':
 else:
     verifier = PureRobustnessVerifier
 
-DATA = loadmat(data_file)
+DATA = load(data_file)
 
 ac = PrettyTable()
 time = PrettyTable()
@@ -22,10 +22,10 @@ time.add_column('epsilon', ['Robust Bound', 'Robustness Algorithm'])
 for j in range(n):
     c_eps = eps * (j + 1)
     ac_temp, time_temp = verifier(
-        DATA['kraus'].astype(complex),
-        DATA['O'].astype(complex),
-        DATA['data'].astype(complex),
-        DATA['label'].T[:,0],
+        DATA['kraus'],
+        DATA['O'],
+        DATA['data'],
+        DATA['label'],
         c_eps)
     
     ac.add_column('{:e}'.format(c_eps), [
