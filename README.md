@@ -8,8 +8,7 @@ This toolbox is implemented on Python and can verify the robustness of quantum m
 ---
 This toolbox makes use of [Numpy](https://numpy.org) and an SDP solver — [CVXPY](https://www.cvxpy.org/): Python Software for Disciplined Convex Programming. 
 
-### Installation for Unix, Linux (Ubuntu 18.04 as the example)
----
+###### Installation for Unix, Linux (Ubuntu 18.04 as the example)
 1) The installation of VeiQ requires BLAS and LAPACK. Cmake and pip3 are also needed.
 ```sh
 sudo apt install -y libblas-dev liblapack-dev cmake python3-pip
@@ -22,7 +21,7 @@ pip3 install numpy
 ```sh
 pip3 install cvxpy
 ```
-4) In addition, our demostration file `batch_check.py` uses a Python library [PrettyTable] for printing a format table summerizing the numerical results.
+4) In addition, our demostration file `batch_check.py` uses a Python library PrettyTable for printing a format table summerizing the numerical results.
 ```sh
 pip3 install prettytable
 ```
@@ -30,23 +29,24 @@ pip3 install prettytable
 
 ### Running Tests and Examples
 ---
-###### Try the follwing commands in bash for robustness verification of four quantum classifiers.
-
+Try the follwing commands in bash for robustness verification of four quantum classifiers.
 1) Quantum Bits Classifications
 ```sh
-python3 batch_check.py binary_cav.mat 1e-3 4 mixed
+python3 batch_check.py binary_cav.npz 1e-3 4 mixed
 ```
+The first argument `binary_cav.npz` is the numpy data file that can be exported from a quantum classifier (like classifier defined in Google's Tensorflow Quantum), the second argument `1e-3` is a robustness parameter we want to verify, which is `1e-3`-robustness, the third argument `4` typically results the script checks `1e-3`, `2e-3`, ..., `4e-3`-robustness and the final argument claims whether a `mixed` state or a `pure` state verification method applied.
+
 2) Quantum Phase Recognition 
 ```sh
-python3 batch_check.py phase_recong_cav.mat 1e-4 4 mixed
+python3 batch_check.py phase_recog_cav.npz 1e-4 4 mixed
 ```
 3) Cluster Excitation Detection 
 ```sh
-python3 batch_check.py excitation_cav.mat 1e-4 4 mixed
+python3 batch_check.py excitation_cav.npz 1e-4 4 mixed
 ```
 4) The Classification of MNIST
 ```sh
-python3 batch_check.py mnist_cav.mat 1e-4 4 pure
+python3 batch_check.py mnist_cav.npz 1e-4 4 pure
 ```
 ### Experimental Results
 ---
