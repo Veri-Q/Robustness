@@ -14,7 +14,7 @@ This toolbox makes use of [Numpy](https://numpy.org) and an SDP solver — [CVXP
 ```sh
 sudo apt install -y libblas-dev liblapack-dev cmake python3-pip
 ```
-2) Because the default version of Python in Ubuntu 18.04 is Python3.6, we should install Numpy first.
+2) Because the default version of Python in Ubuntu 18.04 is Python3.6, Numpy should be installed first.
 ```sh
 pip3 install numpy
 ```
@@ -22,7 +22,7 @@ pip3 install numpy
 ```sh
 pip3 install cvxpy
 ```
-4) In addition, our demostration file `batch_check.py` uses a Python library PrettyTable for printing a format table.
+4) In addition, our demostration file `batch_check.py` uses a Python library [PrettyTable] for printing a format table summerizing the numerical results.
 ```sh
 pip3 install prettytable
 ```
