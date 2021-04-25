@@ -8,11 +8,10 @@ This toolbox is implemented on Google’s TensorFlow Quantum and can verify the 
 ---
 This toolbox makes use of  an SDP solver — [CVXPY](https://www.cvxpy.org/): Python Software for Disciplined Convex Programming. 
 
-The installation of VeiQ requires BLAS and LAPACK. Cmake and pip3 are also needed.
-
-###### Installation for Unix, Linux (Ubuntu 18.04 as the example)
+### Installation for Unix, Linux (Ubuntu 18.04 as the example)
+1) The installation of VeiQ requires BLAS and LAPACK. Cmake and pip3 are also needed.
 ```sh
-1) sudo apt install -y libblas-dev liblapack-dev cmake python3-pip
+sudo apt install -y libblas-dev liblapack-dev cmake python3-pip
 ```
 2) Because the default version of Python in Ubuntu 18.04 is Python3.6, we should install Numpy first.
 ```sh
