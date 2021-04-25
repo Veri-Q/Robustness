@@ -50,7 +50,7 @@ python3 batch_check.py mnist_cav.mat 1e-4 4 pure
 ```
 ### Experimental Results
 ---
-######After running tests, you will get the following results. It is worth noting that the verification time is depending on the performance of your computer devices.
+###### After running tests, you will get the following results. It is worth noting that the verification time is depending on the performance of your computer devices.
 1) Quantum Bits Classifications
 ![avatar](https://github.com/j68249959/VeriQ/blob/main/Experimental%20Results/Binary.png)
 2) Quantum Phase Recognition 
