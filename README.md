@@ -9,7 +9,7 @@ This toolbox is implemented on Python and can verify the robustness of quantum m
 This toolbox makes use of [Numpy](https://numpy.org) and an SDP solver — [CVXPY](https://www.cvxpy.org/): Python Software for Disciplined Convex Programming. 
 
 ###### Installation for Unix, Linux (Ubuntu 18.04 as the example)
-1) The installation of VeiQ requires BLAS and LAPACK. Cmake and pip3 are also needed.
+1) The installation of VeriQ requires BLAS and LAPACK. Cmake and pip3 are also needed.
 ```sh
 sudo apt install -y libblas-dev liblapack-dev cmake python3-pip
 ```
