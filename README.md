@@ -36,18 +36,26 @@ pip3 install prettytable
 ```sh
 python3 batch_check.py binary_cav.mat 1e-3 4 mixed
 ```
-2) quantum Phase Recognition 
+2) Quantum Phase Recognition 
 ```sh
 python3 batch_check.py phase_recong_cav.mat 1e-4 4 mixed
 ```
-4) Cluster Excitation Detection 
+3) Cluster Excitation Detection 
 ```sh
 python3 batch_check.py excitation_cav.mat 1e-4 4 mixed
 ```
-6) The Classification of MNIST
+4) The Classification of MNIST
 ```sh
 python3 batch_check.py mnist_cav.mat 1e-4 4 pure
 ```
 ### Experimental Results
 ---
+######After running tests, you will get the following results.
+1) Quantum Bits Classifications
 ![avatar](https://github.com/j68249959/VeriQ/blob/main/Experimental%20Results/Binary.png)
+2) Quantum Phase Recognition 
+![avatar](https://github.com/j68249959/VeriQ/blob/main/Experimental%20Results/Phase.png)
+3) Cluster Excitation Detection 
+![avatar](https://github.com/j68249959/VeriQ/blob/main/Experimental%20Results/Excitation.png)
+4) The Classification of MNIST
+![avatar](https://github.com/j68249959/VeriQ/blob/main/Experimental%20Results/MNIST.png)
