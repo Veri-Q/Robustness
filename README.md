@@ -1,30 +1,32 @@
 VeriQ
 ===
+Phython Toolbox for Robustness Verification of Quantum Classifiers 
 
-Robustness Verification of Quantum Classifiers (Binary implementation)
+This toolbox is implemented on Google’s TensorFlow Quantum and can verify the robustness of quantum machine learning algorithms with respect to a small disturbance of noises, derived from the surrounding environment.
 
-### Requirements
+### Requirements 
 ---
-Our tool relies on [CVXPY](https://www.cvxpy.org/). 
+This toolbox makes use of  an SDP solver — [CVXPY](https://www.cvxpy.org/): Python Software for Disciplined Convex Programming. 
 
-Its installation requires BLAS and LAPACK. Cmake and pip3 are also needed.
-###### Unix, Linux (Example for Ubuntu 18.04)
+The installation of VeiQ requires BLAS and LAPACK. Cmake and pip3 are also needed.
+
+###### Installation for Unix, Linux (Ubuntu 18.04 as the example)
 ```sh
-sudo apt install -y libblas-dev liblapack-dev cmake python3-pip
+1) sudo apt install -y libblas-dev liblapack-dev cmake python3-pip
 ```
-Because the default version of Python in Ubuntu 18.04 is Python3.6, we should install Numpy first.
+2) Because the default version of Python in Ubuntu 18.04 is Python3.6, we should install Numpy first.
 ```sh
 pip3 install numpy
 ```
-Then, install CVXPY.
+3) install CVXPY.
 ```sh
 pip3 install cvxpy
 ```
-In addition, our demostration file `batch_check.py` uses a Python library PrettyTable for printing a format table.
+4) In addition, our demostration file `batch_check.py` uses a Python library PrettyTable for printing a format table.
 ```sh
 pip3 install prettytable
 ```
-
+5) Clone or download the VeriQ toolbox from (https://github.com/j68249959/VeriQ)
 ### Usage
 ---
 We provide two functions for robustness verification `RobustnessVerifier` and `PureRobustnessVerifier` that aim to mixed quantum state and pure quantum state, respectively. See the following example for usage.
