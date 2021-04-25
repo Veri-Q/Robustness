@@ -40,7 +40,7 @@ Try the follwing commands in bash for robustness verification of four quantum cl
 ```sh
 python3 batch_check.py binary_cav.npz 1e-3 4 mixed
 ```
-The first argument `binary_cav.npz` is the numpy data file that can be exported from a quantum classifier (like classifier defined in Google's Tensorflow Quantum), the second argument `1e-3` is a robustness parameter we want to verify, which is `1e-3`-robustness, the third argument `4` typically results the script checks `1e-3`, `2e-3`, ..., `4e-3`-robustness and the final argument claims whether a `mixed` state or a `pure` state verification method applied.
+The first argument `binary_cav.npz` is the numpy data file that is exported from a quantum classifier (including the classifiers trained on the platform--- [Tensorflow Quantum](https://www.tensorflow.org/quantum/) of Google), the second argument `1e-3` is a robustness parameter we want to verify, which is `1e-3`-robustness, the third argument `4` typically results the script checks `1e-3`, `2e-3`, ..., `4e-3`-robustness and the final argument claims whether a `mixed` state or a `pure` state verification method applied.
 
 2) Quantum Phase Recognition 
 ```sh
