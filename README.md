@@ -9,6 +9,7 @@ This toolbox is implemented on Google’s TensorFlow Quantum and can verify the 
 This toolbox makes use of [Numpy](https://numpy.org) and an SDP solver — [CVXPY](https://www.cvxpy.org/): Python Software for Disciplined Convex Programming. 
 
 ### Installation for Unix, Linux (Ubuntu 18.04 as the example)
+---
 1) The installation of VeiQ requires BLAS and LAPACK. Cmake and pip3 are also needed.
 ```sh
 sudo apt install -y libblas-dev liblapack-dev cmake python3-pip
@@ -29,7 +30,7 @@ pip3 install prettytable
 
 ### Running Tests and Examples
 ---
-###### Try follwing commands in bash for robustness verification of four quantum classifiers.
+###### Try the follwing commands in bash for robustness verification of four quantum classifiers.
 
 1) Quantum Bits Classificationas
 ```sh
