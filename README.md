@@ -2,7 +2,7 @@ VeriQ
 ===
 Phython Toolbox for Robustness Verification of Quantum Classifiers 
 
-This toolbox is implemented on Google’s TensorFlow Quantum and can verify the robustness of quantum machine learning algorithms with respect to a small disturbance of noises, derived from the surrounding environment.
+This toolbox is implemented on Python and can verify the robustness of quantum machine learning algorithms with respect to a small disturbance of noises, derived from the surrounding environment.
 
 ### Requirements 
 ---
