@@ -1,4 +1,4 @@
-Qrobustness
+VeriQ
 ===
 
 Robustness Verification of Quantum Classifiers (Binary implementation)
