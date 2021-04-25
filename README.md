@@ -32,12 +32,11 @@ pip3 install prettytable
 ---
 ###### Try the follwing commands in bash for robustness verification of four quantum classifiers.
 
-1) Quantum Bits Classificationas
+1) Quantum Bits Classifications
 ```sh
 python3 batch_check.py binary_cav.mat 1e-3 4 mixed
 ```
 2) quantum Phase Recognition 
-![](https://github.com/j68249959/VeriQ/blob/main/Figures/binary_model.pdf)
 ```sh
 python3 batch_check.py phase_recong_cav.mat 1e-4 4 mixed
 ```
@@ -49,3 +48,5 @@ python3 batch_check.py excitation_cav.mat 1e-4 4 mixed
 ```sh
 python3 batch_check.py mnist_cav.mat 1e-4 4 pure
 ```
+### Experimental Results
+---
