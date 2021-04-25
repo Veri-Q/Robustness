@@ -50,4 +50,4 @@ python3 batch_check.py mnist_cav.mat 1e-4 4 pure
 ```
 ### Experimental Results
 ---
-![avatar]https://github.com/j68249959/VeriQ/blob/main/Experimental%20Results/Binary.png
+![avatar](https://github.com/j68249959/VeriQ/blob/main/Experimental%20Results/Binary.png)
