@@ -37,6 +37,7 @@ pip3 install prettytable
 python3 batch_check.py binary_cav.mat 1e-3 4 mixed
 ```
 2) quantum Phase Recognition 
+![](https://github.com/j68249959/VeriQ/blob/main/Figures/binary_model.pdf)
 ```sh
 python3 batch_check.py phase_recong_cav.mat 1e-4 4 mixed
 ```
