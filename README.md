@@ -61,7 +61,7 @@ python3 batch_check.py mnist_cav.npz 1e-4 4 pure
 
 #### Adversarial Example Generation
 
-Use the python script `generate_adversay.py` to generate adversarial example.
+A python script `generate_adversay.py` to show adversarial example generation.
 ```sh
 python3 generate_adversary.py
 ```
