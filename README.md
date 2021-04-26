@@ -24,9 +24,9 @@ pip3 install numpy
 ```sh
 pip3 install cvxpy
 ```
-4) In addition, our demostration file `batch_check.py` uses a Python library PrettyTable for printing a format table summerizing the numerical results.
+4) In addition, our demostration file `batch_check.py` uses a Python library PrettyTable for printing a format table summerizing the numerical results, and matplotlib is also needed to be installed for generating visualized adversary examples for the classification of MNIST.
 ```sh
-pip3 install prettytable
+pip3 install prettytable matplotlib
 ```
 5) Clone or download the VeriQ toolbox from (https://github.com/j68249959/VeriQ). All files must be saved in the same location.
 ```sh
