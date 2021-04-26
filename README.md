@@ -75,7 +75,7 @@ The models of the above classifiers can be found in the `Figures` file.
 
 ### Experimental Results
 ---
-###### After running tests, you will get the following results (also see in the `Experimental_Results` file). It is worth noting that the verification time is depending on the performance of your computer devices. 
+###### After running tests, you will get the following results (also see in the `Experimental_Results` file). It is worth noting that the verification time is depending on the performance of your computer devices. All results can be found in the `Experimental_Results` file.
 1) Quantum Bits Classifications
 ![avatar](https://github.com/j68249959/VeriQ/blob/main/Experimental%20Results/Binary.png)
 2) Quantum Phase Recognition 
