@@ -40,12 +40,15 @@ To implement robustness verification in VeriQ, we assume that the user has alrea
 #### Robustness Verification
 
 Then try the follwing commands in bash for robustness verification of four quantum classifiers.
+```sh
+python3 batch_check.py <data_file> <robustness_unit> <experiment_number> <state_flag>
+```
+The last four arguments are inputted by users. The first one `<data_file>` is a numpy data file that consists of a (well-trained) quantum classifier and coresponding training dataset. The numpy data file can be obatined by the data of the classifiers trained on the platform --- [Tensorflow Quantum](https://www.tensorflow.org/quantum/) of Google. The second argument `<robustness_unit>` is the unit of the robustness parameter. The third argument `<experiment_number>` represents the number of robustness verification with increasing robustness parameters by the unit `<robustness_unit>`, i.e., `1e-3`, `2e-3`,`3e-3`, `4e-3`-robustness for `<robustness_unit>` and `<experiment_number>` respectively being `1e-3` and `4` to be checked one by one. The last one `<state_flag>` indicates the considering quantum data in robustness verification, where  the values of `<state_flag>` are `mixed`  and `pure` referring to mixed states and pure states, respectively.
+
 1) Quantum Bits Classifications
 ```sh
 python3 batch_check.py binary_cav.npz 1e-3 4 mixed
 ```
-The last four arguments are inputted by users. The first one `binary_cav.npz` is a numpy data file that consists of a (well-trained) quantum classifier and coresponding training dataset. The numpy data file can be obatined by the data of the classifiers trained on the platform --- [Tensorflow Quantum](https://www.tensorflow.org/quantum/) of Google. The second argument `1e-3` is the unit of the robustness parameter. The third argument `4` represents the number of robustness verification with increasing robustness parameters by the unit `1e-3`, i.e., `1e-3`, `2e-3`,`3e-3`, `4e-3`-robustness to be checked one by one. The last one indicates the considering quantum data in robustness verification, where  `mixed`  and `pure` refer to mixed states and pure states, respectively.
-
 2) Quantum Phase Recognition 
 ```sh
 python3 batch_check.py phase_recog_cav.npz 1e-4 4 mixed
