@@ -108,7 +108,7 @@ def PureStateRobustnessVerifier(OO, data, label, e, ADVERSARY_EXAMPLE=False):
                 plt.yticks([])
 
                 plt.show()
-                plt.savefig('adversary_exmaple_{:d}.pdf'.format(non_robust_num), bbox_inches='tight')
+                plt.savefig('adversary_exmaple_{:d}.png'.format(non_robust_num), bbox_inches='tight')
 
         print('{:d}/{:d} states checked: {:d} unrobust state'.format(i + 1, n, non_robust_num), end='\r')
 
