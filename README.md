@@ -28,7 +28,7 @@ pip3 install cvxpy
 ```sh
 pip3 install prettytable matplotlib
 ```
-5) Clone or download the VeriQ toolbox from (https://github.com/j68249959/VeriQ). All files must be saved in the same location.
+5) Clone or download the VeriQ toolbox from [VeriQ](https://github.com/j68249959/VeriQ). All files must be saved in the same location.
 ```sh
 git clone https://github.com/j68249959/VeriQ
 ```
