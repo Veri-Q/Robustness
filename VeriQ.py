@@ -2,6 +2,9 @@ import cvxpy as cp
 import numpy as np
 import time
 from scipy.optimize import minimize, NonlinearConstraint
+import matplotlib as mpl
+mpl.use('Agg')
+import matplotlib.pyplot as plt
 
 def StateRobustnessVerifier(OO, data, label, e):
     dim, n = data.shape[1], data.shape[0]
@@ -39,7 +42,7 @@ def StateRobustnessVerifier(OO, data, label, e):
     print('=' * 35)
     return non_robust_num
 
-def PureStateRobustnessVerifier(OO, data, label, e):
+def PureStateRobustnessVerifier(OO, data, label, e, ADVERSARY_EXAMPLE=False):
     dim, n = data.shape[0], data.shape[1]
     non_robust_num = 0
     C = lambda x: x.reshape((-1,1))
@@ -75,6 +78,37 @@ def PureStateRobustnessVerifier(OO, data, label, e):
         delta = 1. - (1. - obj(res.x)) / np.dot(res.x, res.x)
         if delta < e:
             non_robust_num += 1
+            if ADVERSARY_EXAMPLE:
+                original = psi.reshape((16, 16), order = 'F')
+                adv_example = res.x.reshape((16,16), order = 'F')
+                maximum = np.maximum(original.max(), adv_example.max())
+
+                plt.figure()
+                plt.subplot(1, 3, 1)
+                plt.imshow(original, cmap='gray', vmin=0, vmax=maximum)
+                plt.colorbar(fraction=0.045, orientation='horizontal', pad=0.05)
+                plt.title('label ' + '63'[label[i]])
+                plt.xticks([])
+                plt.yticks([])
+
+                plt.subplot(1, 3, 2)
+                plt.imshow(1e4 * (adv_example - original), cmap='gray')
+                plt.colorbar(fraction=0.045, orientation='horizontal', pad=0.05)
+                plt.text(11, 22, 'x 1e-4')
+                plt.xticks([])
+                plt.yticks([])
+                plt.text(-2.6, 8, '+')
+                plt.text(16.6, 8, '=')
+
+                plt.subplot(1, 3, 3)
+                plt.imshow(adv_example, cmap='gray', vmin=0, vmax=maximum)
+                plt.colorbar(fraction=0.045, orientation='horizontal', pad=0.05)
+                plt.title('label ' + '36'[label[i]])
+                plt.xticks([])
+                plt.yticks([])
+
+                plt.show()
+                plt.savefig('adversary_exmaple_{:d}.pdf'.format(non_robust_num), bbox_inches='tight')
 
         print('{:d}/{:d} states checked: {:d} unrobust state'.format(i + 1, n, non_robust_num), end='\r')
 
@@ -126,7 +160,7 @@ def RobustnessVerifier(E, O, data, label, e):
 
     return robust_ac, check_time
 
-def PureRobustnessVerifier(E, O, data, label, e):
+def PureRobustnessVerifier(E, O, data, label, e, ADVERSARY_EXAMPLE=False):
 
     time_start = time.time()
     print('=' * 45 + '\nStarting Pure Robustness Verifier\n' + '-' * 45)
@@ -153,7 +187,8 @@ def PureRobustnessVerifier(E, O, data, label, e):
         non_robust_num[1] = PureStateRobustnessVerifier(OO,
                 data[:, non_robust_index],
                 label[non_robust_index],
-                e)
+                e,
+                ADVERSARY_EXAMPLE)
     else:
         print('Filted by robust bound, all states are robust')
     
