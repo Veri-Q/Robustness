@@ -71,7 +71,7 @@ The user can use the following script to obatin the adversarial examples of MNIS
 ```sh
 python3 generate_adversary.py
 ```
-The models of the above classifiers can be found in `Picture` file. 
+The models of the above classifiers can be found in `Figures` file. 
 
 ### Experimental Results
 ---
