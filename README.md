@@ -35,7 +35,9 @@ git clone https://github.com/j68249959/VeriQ
 
 ### Running Tests and Examples
 ---
-Try the follwing commands in bash for robustness verification of four quantum classifiers.
+To implement robustness verification in VeriQ, we assume that the user has already well trained a quantum classifier which consists of a quantum circuit with a measurement at the end. The quantum circuit and the trainning data have been saved as a numpy data file.
+
+Then try the follwing commands in bash for robustness verification of four quantum classifiers.
 1) Quantum Bits Classifications
 ```sh
 python3 batch_check.py binary_cav.npz 1e-3 4 mixed
