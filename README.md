@@ -1,4 +1,4 @@
-VeriQ: Robustness
+VeriQRobust
 ===
 Python Toolbox for Robustness Verification of Quantum Classifiers 
 
